@@ -161,23 +161,3 @@ if uploaded_file is not None:  # Verifica se um arquivo foi carregado.
 
     except Exception as e:
         st.error(f"Erro ao processar a imagem: {e}")  # Exibe uma mensagem de erro se ocorrer um erro durante o processamento.
-content_copy
-download
-Use code with caution.
-Python
-
-Resumo do Código:
-
-Este script Streamlit cria um dashboard interativo para diagnosticar doenças em folhas de cana-de-açúcar, permitindo que o usuário carregue uma imagem, a qual é processada e classificada por um modelo CNN (VGG16.h5). O dashboard exibe a imagem, o nome da doença ou a indicação de que a folha está saudável, a probabilidade da previsão e informações adicionais sobre a doença. Um histórico das previsões é salvo em um arquivo CSV.
-
-Aprimoramentos:
-
-Tratamento de Erros Abrangente: Adicionado tratamento de erros em todas as funções principais (carregamento do modelo, pré-processamento da imagem, previsão e salvamento do histórico) para evitar falhas inesperadas.
-
-Validação do Pré-Processamento: Verificação se a imagem foi corretamente pré-processada antes de prosseguir com a previsão.
-
-Mensagem de "Imagem Não Reconhecida": Implementada a lógica para exibir uma mensagem amigável ao usuário quando a confiança da previsão estiver abaixo de um limiar, indicando que o modelo não conseguiu identificar a imagem.
-
-Código Comentado: Cada linha de código foi comentada para facilitar a compreensão e manutenção.
-
-Para usar, certifique-se de ter as bibliotecas instaladas e que o arquivo VGG16.h5 esteja na mesma pasta do script. Execute com streamlit run app.py.
